@@ -1,0 +1,198 @@
+/* Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Novo Contêiner que ocupa a tela toda */
+.page-container {
+    display: flex;
+    min-height: 100vh; /* 100% da altura da janela */
+    width: 100%;
+}
+
+/* Coluna da Esquerda (Tudo exceto a barra lateral) */
+.left-column {
+    flex: 1; /* Ocupa todo o espaço que sobrar da barra lateral */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #b3b3b3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    height: 80px;
+}
+
+.logo {
+    background-color: #ffffff;
+    color: #000000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 26px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Área de Conteúdo Central */
+.content {
+    flex: 1; /* Empurra o rodapé para baixo dinamicamente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza o card perfeitamente no meio da tela */
+    padding: 30px;
+}
+
+.search-container {
+    margin-bottom: 30px;
+}
+
+#searchInput {
+    padding: 8px 12px;
+    width: 180px;
+    border: 1px solid #a6a6a6;
+    text-align: center;
+    font-size: 13px;
+    outline: none;
+}
+
+/* Estilização do Card */
+.card {
+    background-color: #ffffff;
+    width: 650px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    display: flex;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+.card-left {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.card-left img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.btn-alterar {
+    padding: 6px 18px;
+    border: 1px solid #a6a6a6;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+#empId {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    color: #000000;
+}
+
+.card-right {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.card-right h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.card-right p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+/* Botões de Paginação */
+.pagination {
+    display: flex;
+    gap: 15px;
+}
+
+.pagination button {
+    padding: 8px 22px;
+    border: 1px solid #a6a6a6;
+    background-color: #f2f2f2;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #b3b3b3;
+    text-align: center;
+    padding: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    font-size: 13px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Barra Lateral - Agora indo de ponta a ponta na altura */
+.sidebar {
+    width: 140px; 
+    background-color: #7f7f7f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; /* Esta propriedade garante espaçamento idêntico entre todos os botões */
+    padding: 20px 0;
+}
+
+.sidebar button {
+    width: 110px;
+    padding: 8px;
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}

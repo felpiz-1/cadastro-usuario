@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionários</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="page-container">
+        
+        <div class="left-column">
+            
+            <header class="header">
+                <div class="logo">Logo</div>
+                <h1>Consulta de Funcionários</h1>
+            </header>
+
+            <main class="content">
+                <div class="search-container">
+                    <input type="number" id="searchInput" placeholder="Digite o ID desejado">
+                </div>
+
+                <div class="card">
+                    <div class="card-left">
+                        <img id="profilePic" src="" alt="Foto de Perfil">
+                        <button class="btn-alterar">Alterar</button>
+                        <h3 id="empId">ID: 1</h3>
+                    </div>
+                    
+                    <div class="card-right">
+                        <h2 id="empName">Carregando...</h2>
+                        <p class="cargo" id="empTitle">Aguarde</p>
+                        <p class="departamento" id="empDept">Aguarde</p>
+                        <p class="email" id="empEmail">carregando@exemplo.com</p>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <button id="btnPrev">Anterior</button>
+                    <button id="btnNext">Próximo</button>
+                </div>
+            </main>
+
+            <footer>
+                <p>Desenvolvido por Felipe Rocha</p>
+            </footer>
+            
+        </div>
+
+        <aside class="sidebar">
+            <button>Funcionários</button>
+            <button>Departamentos</button>
+            <button>Filiais</button>
+            <button>Diretoria</button>
+            <button>Gerência</button>
+        </aside>
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
