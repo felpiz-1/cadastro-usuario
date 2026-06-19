@@ -59,3 +59,20 @@ async function fetchEmployeeData(id) {
         empEmail.textContent = employeeData.email;
         empIdText.textContent = `ID: ${employeeData.id}`;
 
+       // Obtendo o gênero para filtrar a segunda API
+        const employeeGender = employeeData.gender;
+
+        // API 2 - Obter foto coerente visualmente no Random User
+        const response2 = await fetch(`https://randomuser.me/api/?gender=${employeeGender}`);
+        const photoData = await response2.json();
+
+        // Extraindo imagem de maior definição disponível (large)
+        const photoUrl = photoData.results[0].picture.large;
+        
+        // Atualizando Lado Esquerdo do Card
+        profilePic.src = photoUrl;
+
+    } catch (error) {
+        console.error("Erro na comunicação com as APIs:", error);
+    }
+}
