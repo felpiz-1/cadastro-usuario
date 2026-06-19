@@ -29,3 +29,16 @@ searchInput.addEventListener('keypress', (event) => {
     }
 });
 
+async function fetchEmployeeData(id) {
+    try {
+        // API 1 - Obter dados cadastrais no DummyJSON
+        const response1 = await fetch(`https://dummyjson.com/users/${id}`);
+        const employeeData = await response1.json();
+
+        // Tratamento caso ID não exista
+        if (!employeeData.id) {
+            alert("Funcionário não encontrado!");
+            return;
+        }
+
+
