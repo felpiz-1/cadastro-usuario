@@ -40,5 +40,22 @@ async function fetchEmployeeData(id) {
             alert("Funcionário não encontrado!");
             return;
         }
+async function fetchEmployeeData(id) {
+    try {
+        // API 1 - Obter dados cadastrais no DummyJSON
+        const response1 = await fetch(`https://dummyjson.com/users/${id}`);
+        const employeeData = await response1.json();
 
+        // Tratamento caso ID não exista
+        if (!employeeData.id) {
+            alert("Funcionário não encontrado!");
+            return;
+        }
+
+        // Preenchendo o Lado Direito do Card e o ID
+        empName.textContent = `${employeeData.firstName} ${employeeData.lastName}`;
+        empTitle.textContent = employeeData.company.title;
+        empDept.textContent = employeeData.company.department;
+        empEmail.textContent = employeeData.email;
+        empIdText.textContent = `ID: ${employeeData.id}`;
 
